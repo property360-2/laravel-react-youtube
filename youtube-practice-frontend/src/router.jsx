@@ -10,12 +10,8 @@ import GuestLayout from "./components/GuestLayout";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <DefaultLayout/>,
+    element: <DefaultLayout />,
     children: [
-        {
-            path: "/",
-            element: <Navigate to="/Users" />,
-        },
       {
         path: "/Users",
         element: <Users />,
@@ -23,6 +19,9 @@ const router = createBrowserRouter([
       {
         path: "/Dashboard",
         element: <Dashboard />,
+      },{
+        path: "/",
+        element: <Navigate to="/Users" />,
       }
     ],
   },
